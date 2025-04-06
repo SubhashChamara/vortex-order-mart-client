@@ -97,12 +97,14 @@ const AuthLayout: FC = () => {
                     element={<Report />}
                   />
                 </Routes>
+                <QuickActionButton />
               </Layout>
             }
           />
+          
         </Routes>
       )}
-      <QuickActionButton />
+      
     </>
   );
 };
