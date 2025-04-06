@@ -1,0 +1,29 @@
+export interface ClientInformation {
+    groupSale?: boolean;
+    groupReference?: string;
+    customerSourceTypeId?: number;
+    cardTypeId?: number;
+    title?: string;
+    applicantName?: string;
+    applicantLastName?: string;
+    applicantNIC?: string;
+    applicantNewNIC?: string;
+    applicantPassport?: string;
+    dob?: Date;
+    resAddress1?: string;
+    resAddress2?: string;
+    resAddress3?: string;
+    resAddress4?: string;
+    teleResident?: string;
+    teleMobile?: string;
+    teleEmp?: string;
+    email?: string;
+    requestedDateTime?: Date;
+    companyId?: number;
+    companyAddressNo?: string;
+    companyAddress1?: string;
+    companyAddress2?: string;
+    companyAddressArea?: string;
+    companyTelephone?: string;
+    basicSalary?: number;
+}

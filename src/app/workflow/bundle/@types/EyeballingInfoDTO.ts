@@ -1,0 +1,28 @@
+export interface EyeballingInfoDTO {
+    id?: number | null;
+    reportOk?: boolean | null;
+    company?: string | null;
+    disbursalAccount?: string | null;
+    nicNumber?: string | null;
+    convertedNic?: string | null;
+    dob?: string | null;
+    customerCategory?: string | null;
+    reportName?: string | null;
+    address?: string | null;
+    resTp?: string | null;
+    mobTp?: string | null;
+    offTp?: string | null;
+    employeeName?: string | null;
+    masterIndustryId?: number | null;
+    masterProfessionId?: number | null;
+    masterCityRiskRatingId?: number | null;
+    employerId?: number | null;
+    age?: string | null;
+    salaryScale?: number | null;
+    resAddress1?: string | null;
+    resAddress2?: string | null;
+    resAddress3?: string | null;
+    resAddress4?: string | null;
+    applicationDateTime?: string | null;
+    businessKey?: string | null;
+}

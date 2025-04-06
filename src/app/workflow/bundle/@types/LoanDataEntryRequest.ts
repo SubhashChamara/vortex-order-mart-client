@@ -1,0 +1,25 @@
+export interface LoanDataEntryRequest {
+    appReceivedDate?: string | null;
+    plLoanType: string | null;
+    requestedDateTime?: string | null;
+    applicantNIC?: string | null;
+    applicantName?: string | null;
+    designation?: string | null;
+    requestAmount?: number | null;
+    interestRate?: number | null;
+    tenor?: string | null;
+    masterNo?: string | null;
+    loanRepaymentMode?: string | null;
+    grossIncome?: number | null;
+    netIncome?: number | null;
+    dbr?: number | null;
+    companyName?: string | null;
+    natureOfBusiness?: string | null;
+    salesChannel?: string | null;
+    resAddress1?: string | null;
+    resAddress2?: string | null;
+    resAddress3?: string | null;
+    teleResident?: string | null;
+    teleMobile?: string | null;
+    pwidSourceCode?: string | null;
+}

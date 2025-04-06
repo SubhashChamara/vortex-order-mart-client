@@ -1,0 +1,32 @@
+export interface BundleClientRequest {
+    processInstance: string;
+    taskInstance: string;
+    groupSale?: boolean;
+    groupReference?: string | null;
+    customerSourceTypeId?: number | null;
+    cardTypeId?: number | null;
+    title: string | null;
+    applicantName: string;
+    applicantLastName?: string | null;
+    applicantNIC?: string | null;
+    applicantNewNIC?: string | null;
+    applicantPassport?: string | null;
+    dob?: string | null;
+    age?: number | null;
+    resAddress1?: string | null;
+    resAddress2?: string | null;
+    resAddress3?: string | null;
+    resAddress4?: string | null;
+    teleResident?: string | null;
+    teleMobile?: string | null;
+    teleEmp?: string | null;
+    email: string;
+    requestedDateTime: string;
+    companyId?: number | null;
+    companyAddressNo?: string | null;
+    companyAddress1?: string | null;
+    companyAddress2?: string | null;
+    companyAddressArea?: string | null;
+    companyTelephone?: string | null;
+    basicSalary: number;
+}
