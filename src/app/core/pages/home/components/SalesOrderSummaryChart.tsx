@@ -95,7 +95,7 @@ const SalesOrderSummaryChart: React.FC<SalesOrderSummaryChartProps> = ({
             ))}
           </Select>
         </Box>
-        <Box height={300}>
+        <Box height={380}>
           <Line data={chartData} options={options} />
         </Box>
       </CardContent>

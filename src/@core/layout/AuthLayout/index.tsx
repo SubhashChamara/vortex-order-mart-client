@@ -26,7 +26,7 @@ import ReportAllocation from "../../../app/core/pages/admin/report-allocation";
 import AddReport from "../../../app/core/pages/admin/add-report";
 import InitiationReportMemo from "../../../app/workflow/bundle/reports/initiation-report/InitiationReport";
 import BulkUpload from "../../../app/core/pages/admin/user-bulk-upload";
-import QuickActionButton from "../../../@context/QuickActionButton"
+import QuickActionButton from "../../../app/core/pages/home/components/QuickActionButton"
 
 
 const AuthLayout: FC = () => {
@@ -97,7 +97,7 @@ const AuthLayout: FC = () => {
                     element={<Report />}
                   />
                 </Routes>
-                <QuickActionButton />
+                
               </Layout>
             }
           />

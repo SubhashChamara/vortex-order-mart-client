@@ -7,7 +7,9 @@ import WorkflowListView from "./components/WorkflowListView";
 import WorkflowStatisticsView from "./components/WorkflowStatisticsView";
 import { ProcessDefinitionInfo } from "../../types/ProcessDefinitionInfo";
 import SalesOrderSummaryChart from "./components/SalesOrderSummaryChart";
-import QuickActionButton from "../../../../@context/QuickActionButton";
+import QuickActionButton from "./components/QuickActionButton";
+import SummaryStats from "./components/SummaryStats";
+import NewsBar from "./components/NewsBar";
 
 const Home: FC = () => {
   const [process, setProcess] = useState<ProcessDefinitionInfo | null>(null);
@@ -38,6 +40,37 @@ const Home: FC = () => {
     { date: "21 Jan", value: 12000 },
     { date: "28 Jan", value: 6000 },
   ];
+
+  const summaryData = {
+    thisMonth: {
+      income: 10000,
+      expenditure: 7000,
+      profit: 3000,
+      loss: 500,
+    },
+    lastMonth: {
+      income: 12000,
+      expenditure: 8000,
+      profit: 4000,
+      loss: 300,
+    },
+    thisYear: {
+      income: 150000,
+      expenditure: 100000,
+      profit: 50000,
+      loss: 10000,
+    },
+  };
+
+  const newsList = [
+    "🚀 New product launch next week",
+    "📈 Profits up 20% this quarter",
+    "🛠️ Maintenance scheduled for Saturday",
+    "📢 Join our webinar on process automation",
+  ];
+  
+  <NewsBar newsItems={newsList} />;
+  
   
   return (
     <motion.div
@@ -53,26 +86,28 @@ const Home: FC = () => {
           className="grid grid-cols-1  sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-2 gap-10 w-full min-w-0 mt-10"
         >
           <motion.div variants={item} className="max-h-[34rem] overflow-auto">
-            <WorkflowListView handleSetProcess={handleSetProcess} />
+            <SummaryStats data={summaryData} />
           </motion.div>
 
           <div className="grid grid-cols-1">
             <motion.div variants={item}>
-            <SalesOrderSummaryChart
-              data={salesData}
-              filter="This Month"
-              filterOptions={["This Month", "Last Month", "This Year"]}
-              onFilterChange={(val) => console.log("Filter changed:", val)}
-/>;
+              <SalesOrderSummaryChart
+                data={salesData}
+                filter="This Month"
+                filterOptions={["This Month", "Last Month", "This Year"]}
+                onFilterChange={(val) => console.log("Filter changed:", val)}
+              />
             </motion.div>
-            {/* <motion.div className="grid grid-cols-1 md:grid-cols-2 w-full gap-12 mt-9"></motion.div> */}
+            <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 w-full gap-12 mt-9">
+            <NewsBar newsItems={newsList} />
+            </motion.div>
           </div>
         </div>
       </div>
       <motion.div className="w-1/4 hidden md:block" variants={item}>
         <SideBar />
-        
       </motion.div>
+      <QuickActionButton handleSetProcess={handleSetProcess} />
     </motion.div>
   );
 };

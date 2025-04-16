@@ -8,13 +8,13 @@ import WfNumber from "./WfNumber";
 import ReturnTaskCard from "./ReturnTaskCard";
 import TopSellingItemsCard from "./TopSellingItemsCard";
 import ExpensePieChart from "./ExpensePieChart";
-import QuickActionButton from "../../../../../@context/QuickActionButton";
+import QuickActionButton from "./QuickActionButton";
 
 const SideBar: FC = () => {
  const expenseData = [
-  { name: "Entertainment", value: 60, color: "#1f3fff" },
-  { name: "Bill Expense", value: 15, color: "#ff00ff" },
-  { name: "Investment", value: 5, color: "#2c2f4a"},
+  { name: "Entertainment", value: 60, color: "#158ca4 " },
+  { name: "Bill Expense", value: 15, color: "#900C3F" },
+  { name: "Investment", value: 5, color: "#b236e8"},
   { name: "Others", value: 20, color: "#ff8400" },
 ];
   
